@@ -28,5 +28,5 @@
   </main>
   
   <style>
-    /* Add your styles here if needed */
+    /* To be filled in a later */
   </style>
