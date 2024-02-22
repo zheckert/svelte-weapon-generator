@@ -1,5 +1,6 @@
 <script>
-    let result = "";
+    import LegendaryWeapon from './LegendaryWeapon/legendary.svelte'
+    export let result = "";
   
     const random = (arr) => {
       return arr[Math.floor(Math.random() * arr.length)];
@@ -18,15 +19,36 @@
       let legendaryweapon = `${type} ${adjective} ${weapon} of ${suffix}`;
       result = legendaryweapon;
     };
+    
   </script>
   
   <main>
-    <button on:click={legendaryWeaponGenerator}>Generate Legendary Weapon</button>
-    {#if result}
-      <p>{result}</p>
-    {/if}
+    <div class="container">
+      <button on:click={legendaryWeaponGenerator}>Generate Legendary Weapon</button>
+        {#if result}
+          <p>{result}</p>
+        {:else}
+          <p class="placeholder"></p>
+        {/if}
+    </div>
   </main>
   
   <style>
-    /* To be filled in a later */
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      min-height: 100vh;
+    }
+  
+    .container {
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .placeholder {
+    visibility: hidden;
+    height: 1em; 
+  }
+  
   </style>
