@@ -49,6 +49,22 @@
     .placeholder {
     visibility: hidden;
     height: 1em; 
-  }
+    }
   
+    button {
+      padding: 10px 15px;
+      background-color: #2a65a3;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+    background-color: #2980b9;
+    }
+
+    :global(body) {
+    font-family: 'Arial', sans-serif;
+}
   </style>
